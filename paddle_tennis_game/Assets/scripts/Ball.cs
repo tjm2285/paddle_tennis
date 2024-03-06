@@ -12,7 +12,7 @@ public class Ball : MonoBehaviour
 		extents = 0.5f;
 
     [SerializeField]
-    ParticleSystem bounceParticleSystem, startParticleSystem;
+    ParticleSystem bounceParticleSystem, startParticleSystem, trailParticleSystem;
 
     [SerializeField]
     int bounceParticleEmission = 20,
@@ -25,7 +25,7 @@ public class Ball : MonoBehaviour
 
     void Awake() => gameObject.SetActive(false);
 
-    public void UpdateVisualization() =>
+    public void UpdateVisualization() => trailParticleSystem.transform.localPosition =
         transform.localPosition = new Vector3(position.x, 0f, position.y);
 
     public void Move() => position += velocity * Time.deltaTime;
@@ -38,11 +38,19 @@ public class Ball : MonoBehaviour
         velocity.x = Random.Range(-maxStartXSpeed, maxStartXSpeed);
         velocity.y = -constantYSpeed;
         startParticleSystem.Emit(startParticleEmission);
+        SetTrailEmission(true);
+        trailParticleSystem.Play();
     }
     public void EndGame()
     {
         position.x = 0f;
         gameObject.SetActive(false);
+        SetTrailEmission(false);
+    }
+    void SetTrailEmission(bool enabled)
+    {
+        ParticleSystem.EmissionModule emission = trailParticleSystem.emission;
+        emission.enabled = enabled;
     }
     public void SetXPositionAndSpeed(float start, float speedFactor, float deltaTime)
     {
