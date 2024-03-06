@@ -6,10 +6,14 @@ public class LivelyCamera : MonoBehaviour
 {
     [SerializeField, Min(0f)]
     float
-     jostleStrength = 40f,
-     pushStrength = 1f;
+        springStrength = 100f,
+        dampingStrength = 10f,
+        jostleStrength = 40f,
+        pushStrength = 1f;
+    
+    Vector3 anchorPosition, velocity;
 
-    Vector3 velocity;
+    void Awake() => anchorPosition = transform.localPosition;
 
     public void JostleY() => velocity.y += jostleStrength;
 
@@ -21,6 +25,9 @@ public class LivelyCamera : MonoBehaviour
 
     void LateUpdate()
     {
+        Vector3 displacement = anchorPosition - transform.localPosition;
+        Vector3 acceleration = springStrength * displacement - dampingStrength * velocity;
+        velocity += acceleration * Time.deltaTime;
         transform.localPosition += velocity * Time.deltaTime;
     }
 }
