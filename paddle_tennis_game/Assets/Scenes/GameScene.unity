@@ -133,7 +133,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 447121131605100229, guid: d602df15c9689ae4fb60da5d0c7fbf8c, type: 3}
       propertyPath: m_Name
-      value: Paddle2
+      value: TopPaddle
       objectReference: {fileID: 0}
     - target: {fileID: 2274320214409267284, guid: d602df15c9689ae4fb60da5d0c7fbf8c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -200,6 +200,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9092e2ea937fa7e48b9b8d8e9e880fd5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  extents: 4
+  speed: 5
+  isAI: 1
 --- !u!1001 &609307332
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -788,6 +791,7 @@ MonoBehaviour:
   ball: {fileID: 2085951705601866923}
   bottomPaddle: {fileID: 393008219}
   topPaddle: {fileID: 7887448222887574002}
+  arenaExtents: {x: 10, y: 10}
 --- !u!4 &1629615256
 Transform:
   m_ObjectHideFlags: 0
@@ -998,6 +1002,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab707732637685d45938db6f4a3c0d33, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  constantXSpeed: 8
+  constantYSpeed: 10
+  extents: 0.5
 --- !u!1001 &2225157864027293193
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1065,7 +1072,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 447121131605100229, guid: d602df15c9689ae4fb60da5d0c7fbf8c, type: 3}
       propertyPath: m_Name
-      value: Paddle
+      value: BottomPaddle
       objectReference: {fileID: 0}
     - target: {fileID: 2274320214409267284, guid: d602df15c9689ae4fb60da5d0c7fbf8c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1132,6 +1139,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9092e2ea937fa7e48b9b8d8e9e880fd5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  extents: 4
+  speed: 10
+  isAI: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
