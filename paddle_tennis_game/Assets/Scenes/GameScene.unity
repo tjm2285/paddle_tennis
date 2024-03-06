@@ -217,6 +217,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   extents: 4
   speed: 5
+  maxTargetingBias: 0.75
   isAI: 1
   scoreText: {fileID: 1210650185}
 --- !u!4 &393008222 stripped
@@ -1403,7 +1404,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxXSpeed: 20
-  startXSpeed: 8
+  maxStartXSpeed: 2
   constantYSpeed: 10
   extents: 0.5
 --- !u!4 &2085951705601866927 stripped
@@ -1683,6 +1684,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   extents: 4
   speed: 10
+  maxTargetingBias: 0.75
   isAI: 0
   scoreText: {fileID: 7034538541328228435}
 --- !u!4 &7887448222887574005 stripped

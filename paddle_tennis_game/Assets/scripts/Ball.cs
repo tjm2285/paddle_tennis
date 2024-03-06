@@ -6,8 +6,8 @@ public class Ball : MonoBehaviour
 {
     [SerializeField, Min(0f)]
     float
-        maxXSpeed = 20f,        
-        startXSpeed = 8f,
+        maxXSpeed = 20f,
+        maxStartXSpeed = 2f,        
         constantYSpeed = 10f,
 		extents = 0.5f;
 
@@ -28,7 +28,8 @@ public class Ball : MonoBehaviour
         gameObject.SetActive(true);
         position = Vector2.zero;
         UpdateVisualization();
-        velocity = new Vector2(startXSpeed, -constantYSpeed);
+        velocity.x = Random.Range(-maxStartXSpeed, maxStartXSpeed);
+        velocity.y = -constantYSpeed;
     }
     public void EndGame()
     {
