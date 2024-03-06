@@ -12,10 +12,11 @@ public class Ball : MonoBehaviour
 		extents = 0.5f;
 
     [SerializeField]
-    ParticleSystem bounceParticleSystem;
+    ParticleSystem bounceParticleSystem, startParticleSystem;
 
     [SerializeField]
-    int bounceParticleEmission = 20;
+    int bounceParticleEmission = 20,
+        startParticleEmission = 100;
 
     Vector2 position, velocity;
     public float Extents => extents;
@@ -36,6 +37,7 @@ public class Ball : MonoBehaviour
         UpdateVisualization();
         velocity.x = Random.Range(-maxStartXSpeed, maxStartXSpeed);
         velocity.y = -constantYSpeed;
+        startParticleSystem.Emit(startParticleEmission);
     }
     public void EndGame()
     {
