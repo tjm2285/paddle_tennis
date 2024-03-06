@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class Paddle : MonoBehaviour
@@ -11,6 +12,27 @@ public class Paddle : MonoBehaviour
 
     [SerializeField]
     bool isAI;
+
+    [SerializeField]
+    TextMeshPro scoreText;
+
+    int score;
+    public void StartNewGame()
+    {
+        SetScore(0);
+    }
+
+    public bool ScorePoint(int pointsToWin)
+    {
+        SetScore(score + 1);
+        return score >= pointsToWin;
+    }
+
+    void SetScore(int newScore)
+    {
+        score = newScore;
+        scoreText.SetText("{0}", newScore);
+    }
 
     public void Move(float target, float arenaExtents)
     {
