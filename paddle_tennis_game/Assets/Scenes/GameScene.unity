@@ -6310,6 +6310,8 @@ MonoBehaviour:
   maxStartXSpeed: 2
   constantYSpeed: 10
   extents: 0.5
+  bounceParticleSystem: {fileID: 1634847395}
+  bounceParticleEmission: 20
 --- !u!4 &2085951705601866927 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6758115253117057184, guid: ffea0b333d3b17c49a060484cdaa4e17, type: 3}
