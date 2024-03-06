@@ -16,6 +16,8 @@ public class Ball : MonoBehaviour
     public Vector2 Position => position;
     public Vector2 Velocity => velocity;
 
+    void Awake() => gameObject.SetActive(false);
+
     public void UpdateVisualization() =>
         transform.localPosition = new Vector3(position.x, 0f, position.y);
 
@@ -23,11 +25,16 @@ public class Ball : MonoBehaviour
 
     public void StartNewGame()
     {
+        gameObject.SetActive(true);
         position = Vector2.zero;
         UpdateVisualization();
         velocity = new Vector2(startXSpeed, -constantYSpeed);
     }
-
+    public void EndGame()
+    {
+        position.x = 0f;
+        gameObject.SetActive(false);
+    }
     public void SetXPositionAndSpeed(float start, float speedFactor, float deltaTime)
     {
         velocity.x = maxXSpeed * speedFactor;
