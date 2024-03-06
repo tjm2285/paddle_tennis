@@ -10,15 +10,12 @@ public class GameManager : MonoBehaviour
 
     [SerializeField]
     Paddle bottomPaddle, topPaddle;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
+    void Awake() => ball.StartNewGame();
+
     void Update()
     {
-        
+        ball.Move();
+        ball.UpdateVisualization();
     }
 }
