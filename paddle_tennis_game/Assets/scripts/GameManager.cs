@@ -122,7 +122,7 @@ public class GameManager : MonoBehaviour
         }
         else
         {
-            livelyCamera.JostleY();
+            livelyCamera.JostleY();            
             if (attacker.ScorePoint(pointsToWin))
             {
                 EndGame();

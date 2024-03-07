@@ -138,6 +138,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7958233590685774656, guid: 0d5f4d5623f3e044eb0d7f320f2c4eda, type: 3}
   m_PrefabInstance: {fileID: 2225157864027293193}
   m_PrefabAsset: {fileID: 0}
+--- !u!23 &376468915 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 6409873902088206391, guid: 0d5f4d5623f3e044eb0d7f320f2c4eda, type: 3}
+  m_PrefabInstance: {fileID: 2225157864027293193}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &393008217
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -221,6 +226,8 @@ MonoBehaviour:
   maxTargetingBias: 0.75
   isAI: 1
   scoreText: {fileID: 1210650185}
+  goalRenderer: {fileID: 376468915}
+  goalColor: {r: 42.854557, g: 0, b: 0, a: 1}
 --- !u!4 &393008222 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2274320214409267284, guid: d602df15c9689ae4fb60da5d0c7fbf8c, type: 3}
@@ -238,6 +245,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: bottom
       objectReference: {fileID: 0}
+    - target: {fileID: 6409873902088206391, guid: 0d5f4d5623f3e044eb0d7f320f2c4eda, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: -876546973899608171, guid: 3334aec8fc4219b4daa299a11d64e159, type: 3}
     - target: {fileID: 7958233590685774656, guid: 0d5f4d5623f3e044eb0d7f320f2c4eda, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -286,6 +297,11 @@ PrefabInstance:
 --- !u!4 &633956931 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7958233590685774656, guid: 0d5f4d5623f3e044eb0d7f320f2c4eda, type: 3}
+  m_PrefabInstance: {fileID: 609307332}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &633956932 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 6409873902088206391, guid: 0d5f4d5623f3e044eb0d7f320f2c4eda, type: 3}
   m_PrefabInstance: {fileID: 609307332}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &687253591
@@ -1689,6 +1705,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: top
       objectReference: {fileID: 0}
+    - target: {fileID: 6409873902088206391, guid: 0d5f4d5623f3e044eb0d7f320f2c4eda, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: -876546973899608171, guid: 3334aec8fc4219b4daa299a11d64e159, type: 3}
     - target: {fileID: 7958233590685774656, guid: 0d5f4d5623f3e044eb0d7f320f2c4eda, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -2010,6 +2030,8 @@ MonoBehaviour:
   maxTargetingBias: 0.75
   isAI: 0
   scoreText: {fileID: 7034538541328228435}
+  goalRenderer: {fileID: 633956932}
+  goalColor: {r: 0, g: 31.831923, b: 2.33323, a: 1}
 --- !u!4 &7887448222887574005 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2274320214409267284, guid: d602df15c9689ae4fb60da5d0c7fbf8c, type: 3}
