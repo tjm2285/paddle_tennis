@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class Paddle : MonoBehaviour
 {
+    static readonly int timeOfLastHitId = Shader.PropertyToID("_TimeOfLastHit");
+
     [SerializeField, Min(0f)]
     float
         minExtents = 4f,
@@ -19,11 +21,11 @@ public class Paddle : MonoBehaviour
     TextMeshPro scoreText;
 
     int score;
-
     float extents, targetingBias;
-
+    Material paddleMaterial;
     void Awake()
     {
+        paddleMaterial = GetComponent<MeshRenderer>().material;
         SetScore(0);
     }
 
@@ -97,6 +99,11 @@ public class Paddle : MonoBehaviour
         hitFactor =
             (ballX - transform.localPosition.x) /
             (extents + ballExtents);
-        return -1f <= hitFactor && hitFactor <= 1f;
+         bool success = -1f <= hitFactor && hitFactor <= 1f;
+        if (success)
+        {
+            paddleMaterial.SetFloat(timeOfLastHitId, Time.time);
+        }
+        return success;
     }
 }

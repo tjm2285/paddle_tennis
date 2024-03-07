@@ -981,8 +981,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ball: {fileID: 2085951705601866923}
-  bottomPaddle: {fileID: 393008219}
-  topPaddle: {fileID: 7887448222887574002}
+  bottomPaddle: {fileID: 7887448222887574002}
+  topPaddle: {fileID: 393008219}
   arenaExtents: {x: 10, y: 10}
   pointsToWin: 3
   countdownText: {fileID: 1941865924}
@@ -1184,12 +1184,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1824539678}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2085951705601866927}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1824539680
 MonoBehaviour:
@@ -1640,10 +1640,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: 6758115253117057184, guid: ffea0b333d3b17c49a060484cdaa4e17, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1824539679}
+    m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 8423533316168344580, guid: ffea0b333d3b17c49a060484cdaa4e17, type: 3}
       insertIndex: -1
@@ -2027,3 +2024,4 @@ SceneRoots:
   - {fileID: 1629615256}
   - {fileID: 2072098492}
   - {fileID: 1941865926}
+  - {fileID: 1824539679}
